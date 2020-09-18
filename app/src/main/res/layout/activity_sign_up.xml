@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
+    android:background="@drawable/gas1"
+    android:backgroundTint="@android:color/holo_purple"
+    android:backgroundTintMode="multiply"
+    tools:context=".SignUpActivity">
 
     <FrameLayout
         android:layout_width="0dp"
@@ -16,20 +19,17 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/gas1"
-            android:backgroundTint="@android:color/holo_purple"
-            android:backgroundTintMode="multiply">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/text_view_enter_name"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="85dp"
                 android:text="@string/name"
                 android:textColor="@android:color/background_light"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
                 android:layout_marginTop="84dp"
                 android:text="@string/phone_number"
                 android:textColor="@android:color/background_light"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_enter_name" />
@@ -55,7 +55,7 @@
                 android:layout_marginTop="84dp"
                 android:text="@string/password"
                 android:textColor="@android:color/background_light"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_enter_phone_number" />
@@ -68,16 +68,17 @@
                 android:layout_marginTop="84dp"
                 android:text="@string/confirm_password"
                 android:textColor="@android:color/background_light"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_enter_password" />
 
             <EditText
                 android:id="@+id/edit_text_enter_name"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="78dp"
                 android:autofillHints=""
                 android:cursorVisible="true"
                 android:ems="10"
@@ -87,15 +88,15 @@
                 android:textColor="@android:color/background_light"
                 android:textColorHint="@android:color/background_light"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/text_view_enter_name"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edit_text_enter_phone_number"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="56dp"
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/enter_phone_number"
@@ -104,15 +105,15 @@
                 android:textColor="@android:color/background_light"
                 android:textColorHint="@android:color/background_light"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/text_view_enter_phone_number"
                 app:layout_constraintTop_toBottomOf="@+id/edit_text_enter_name" />
 
             <EditText
                 android:id="@+id/edit_text_enter_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="56dp"
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/enter_password"
@@ -121,15 +122,15 @@
                 android:textColor="@android:color/background_light"
                 android:textColorHint="@android:color/background_light"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/text_view_enter_password"
                 app:layout_constraintTop_toBottomOf="@+id/edit_text_enter_phone_number" />
 
             <EditText
                 android:id="@+id/edit_text_confirm_password"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="72dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="67dp"
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/confirm_password"
@@ -138,7 +139,6 @@
                 android:textColor="@android:color/background_light"
                 android:textColorHint="@android:color/background_light"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/text_view_confirm_password"
                 app:layout_constraintTop_toBottomOf="@+id/edit_text_enter_password" />
 
@@ -157,9 +157,8 @@
 
             <Button
                 android:id="@+id/button_sign_up"
-                android:layout_width="0dp"
+                android:layout_width="411dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:backgroundTint="@android:color/holo_orange_dark"
                 android:text="@string/sign_up"
                 app:layout_constraintBottom_toBottomOf="parent"

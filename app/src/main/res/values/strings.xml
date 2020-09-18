@@ -12,7 +12,7 @@
     <string name="password">Password</string>
     <string name="sign_up_label">SIGN UP FOR M-GAS</string>
     <string name="button_sign_in">SIGN IN</string>
-    <string name="text_view_sign_in">Already have an account?<u>SIGN IN</u> here.</string>
-    <string name="text_view_sign_up">Do not have an account? <u>SIGN UP</u> here.</string>
+    <string name="text_view_sign_in">Already have an account?<u>SIGN IN</u></string>
+    <string name="text_view_sign_up">Do not have an account? <u>SIGN UP</u></string>
     <string name="back_arrow">Back arrow</string>
 </resources>
