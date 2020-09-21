@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "971747814353",
+    "firebase_url": "https://m-gas-6dd2a.firebaseio.com",
+    "project_id": "m-gas-6dd2a",
+    "storage_bucket": "m-gas-6dd2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971747814353:android:ab2c2af5bc4edb68878ef0",
+        "android_client_info": {
+          "package_name": "Alexis.m_gas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971747814353-uo34v5l5msmsp4u3heaf5hjonrhm8jfe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs97dI5MWSo7coUgbLpa8pJW4UCrhol2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971747814353-uo34v5l5msmsp4u3heaf5hjonrhm8jfe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
