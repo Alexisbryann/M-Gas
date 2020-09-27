@@ -12,11 +12,16 @@
     <string name="password">Password</string>
     <string name="sign_up_label">SIGN UP FOR M-GAS</string>
     <string name="button_sign_in">SIGN IN</string>
-    <string name="text_view_sign_in">Already have an account? <u>SIGN IN</u></string>
+    <string name="text_view_sign_in"><u>SIGN IN</u></string>
     <string name="text_view_sign_up">Do not have an account? <u>SIGN UP</u></string>
     <string name="back_arrow">Back arrow</string>
     <string name="cooking_gas">Cooking gas</string>
     <string name="gas_name_quantity">gas name</string>
     <string name="gas_quantity">quantity (kg)</string>
     <string name="cost">Cost (Kshs)</string>
+    <string name="quantity">Qty</string>
+    <string name="Qty">Enter a number</string>
+    <string name="button_order">ORDER</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="sign_in_button">SIGN IN</string>
 </resources>

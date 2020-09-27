@@ -37,23 +37,6 @@
         app:layout_constraintTop_toBottomOf="@+id/text_view_logo" />
 
     <TextView
-        android:id="@+id/text_view_already_have_an_account"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="24dp"
-        android:gravity="center"
-        android:text="@string/text_view_sign_in"
-        android:textColor="@android:color/background_dark"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/text_view_sign_up"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/text_view_sign_up"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -69,4 +52,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="@string/sign_in_button"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_sign_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_view_logo"
+        app:layout_constraintVertical_bias="0.899" />
 </androidx.constraintlayout.widget.ConstraintLayout>
