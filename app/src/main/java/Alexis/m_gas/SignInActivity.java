@@ -23,7 +23,7 @@ public class SignInActivity extends AppCompatActivity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent signIn = new Intent(SignInActivity.this, MapsActivity.class);
+                Intent signIn = new Intent(SignInActivity.this, Navigation.class);
                 startActivity(signIn);
             }
         });
