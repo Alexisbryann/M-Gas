@@ -25,4 +25,5 @@
     <string name="title_activity_maps">Map</string>
     <string name="sign_in_button">SIGN IN</string>
     <string name="img_view_move">track arrow</string>
+    <string name="contact_seller">Call seller</string>
 </resources>
