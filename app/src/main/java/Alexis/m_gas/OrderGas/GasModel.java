@@ -1,45 +1,45 @@
 package Alexis.m_gas.OrderGas;
 
-import android.media.Image;
+import android.widget.ImageView;
 
 public class GasModel {
-    private String gasName;
-    private String gasQuantity;
-    private Image gasImage;
-    private String gasCost;
+    private static String gasName;
+    private static String gasQuantity;
+    private static ImageView gasImage;
+    private static String gasCost;
 
     public GasModel() {
     }
 
-    public String getGasName() {
+    public static String getGasName() {
         return gasName;
     }
 
     public void setGasName(String gasName) {
-        this.gasName = gasName;
+        GasModel.gasName = gasName;
     }
 
-    public String getGasQuantity() {
+    public static String getGasQuantity() {
         return gasQuantity;
     }
 
     public void setGasQuantity(String gasQuantity) {
-        this.gasQuantity = gasQuantity;
+        GasModel.gasQuantity = gasQuantity;
     }
 
-    public Image getGasImage() {
+    public static ImageView getGasImage() {
         return gasImage;
     }
 
-    public void setGasImage(Image gasImage) {
-        this.gasImage = gasImage;
+    public void setGasImage(ImageView gasImage) {
+        GasModel.gasImage = gasImage;
     }
 
-    public String getGasCost() {
+    public static String getGasCost() {
         return gasCost;
     }
 
     public void setGasCost(String gasCost) {
-        this.gasCost = gasCost;
+        GasModel.gasCost = gasCost;
     }
 }
