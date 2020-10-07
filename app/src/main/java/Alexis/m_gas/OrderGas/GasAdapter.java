@@ -1,6 +1,5 @@
 package Alexis.m_gas.OrderGas;
 
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,10 +29,10 @@ public class GasAdapter extends FirebaseRecyclerAdapter<GasModel,GasAdapter.View
     @Override
     protected void onBindViewHolder(@NonNull GasAdapter.ViewHolder holder, int position, @NonNull GasModel model) {
 
-        ImageView image = GasModel.getGasImage();
-        holder.mGasName.setText(GasModel.getGasName());
-        holder.mGasQuantity.setText(GasModel.getGasQuantity());
-        holder.mGasCost.setText(GasModel.getGasCost());
+        ImageView image = GasModel.getImage();
+        holder.mGasName.setText(GasModel.getName());
+        holder.mGasQuantity.setText(GasModel.getQuantity());
+        holder.mGasCost.setText(GasModel.getCost());
         Glide.with(holder.itemView.getContext()).load(image).into(holder.mGasImage);
     }
 

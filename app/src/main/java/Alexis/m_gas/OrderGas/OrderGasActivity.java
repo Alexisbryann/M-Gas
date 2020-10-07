@@ -27,7 +27,7 @@ public class OrderGasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_order_gas);
 
 //        Instance of the database and its reference
-        mReference = FirebaseDatabase.getInstance().getReference();
+        mReference = FirebaseDatabase.getInstance().getReference().child("gas_type");
         mRecyclerView = findViewById(R.id.recycler);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -37,6 +37,8 @@ public class OrderGasActivity extends AppCompatActivity {
                 .Builder<GasModel>()
                 .setQuery(mReference,GasModel.class)
                 .build();
+
+
 
         mAdapter = new GasAdapter(options);
         mRecyclerView.setAdapter(mAdapter);
