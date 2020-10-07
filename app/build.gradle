@@ -43,7 +43,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.4.0'
 //    Storage
     implementation 'com.google.firebase:firebase-storage:19.2.0'
+//    firebase recycler adapter
+    implementation 'com.firebaseui:firebase-ui-database:6.0.2'
 
+//    Glide dependencies
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'

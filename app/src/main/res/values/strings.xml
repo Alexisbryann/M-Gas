@@ -1,7 +1,7 @@
 <resources xmlns:color="http://schemas.android.com/apk/res-auto" xmlns:textcolor="http://schemas.android.com/apk/res/android">
     <string name="app_name">M-Gas</string>
     <string name="logo">M-GAS</string>
-    <string name="motto">Cooking gas you trust, delivered right at your door-step!</string>
+    <string name="motto">Cooking GasModel you trust, delivered right at your door-step!</string>
     <string name="sign_up">SIGN UP</string>
     <string name="enter_name">Enter Name</string>
     <string name="enter_phone_number">Enter Phone Number</string>
@@ -15,8 +15,8 @@
     <string name="text_view_sign_in"><u>SIGN IN</u></string>
     <string name="text_view_sign_up">Do not have an account? <u>SIGN UP</u></string>
     <string name="back_arrow">Back arrow</string>
-    <string name="cooking_gas">Cooking gas</string>
-    <string name="gas_name_quantity">gas name</string>
+    <string name="cooking_gas">Cooking GasModel</string>
+    <string name="gas_name_quantity">GasModel name</string>
     <string name="gas_quantity">quantity (kg)</string>
     <string name="cost">Cost (Kshs)</string>
     <string name="quantity">Qty</string>

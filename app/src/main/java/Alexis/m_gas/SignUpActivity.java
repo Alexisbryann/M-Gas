@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import Alexis.m_gas.OrderGas.OrderGasActivity;
+
 public class SignUpActivity extends AppCompatActivity {
 
     @Override

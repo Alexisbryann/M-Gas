@@ -8,8 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import Alexis.m_gas.OrderGas.OrderGasActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,16 +17,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
-
-        myRef.setValue("Hello world");
-
         Button signIn = findViewById(R.id.button_signIn);
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,SignInActivity.class);
+                Intent intent = new Intent(MainActivity.this, OrderGasActivity.class);
                 startActivity(intent);
             }
         });

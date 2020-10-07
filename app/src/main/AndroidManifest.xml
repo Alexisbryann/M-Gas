@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="Alexis.m_gas">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -33,9 +34,10 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps"
+            tools:ignore="Instantiatable" />
         <activity android:name=".PlaceOrderActivity" />
-        <activity android:name=".OrderGasActivity" />
+        <activity android:name=".OrderGas.OrderGasActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
