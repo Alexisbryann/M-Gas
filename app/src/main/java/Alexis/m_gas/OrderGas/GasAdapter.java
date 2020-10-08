@@ -1,5 +1,6 @@
 package Alexis.m_gas.OrderGas;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,17 +14,21 @@ import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
+import java.util.ArrayList;
+
 import Alexis.m_gas.R;
 
 public class GasAdapter extends FirebaseRecyclerAdapter<GasModel,GasAdapter.ViewHolder> {
+
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
      *
      * @param options
      */
-    public GasAdapter(@NonNull FirebaseRecyclerOptions<GasModel> options) {
-        super(options);
+
+    public GasAdapter(FirebaseRecyclerOptions<GasModel> options) {
+            super(options);
     }
 
     @Override
@@ -43,6 +48,8 @@ public class GasAdapter extends FirebaseRecyclerAdapter<GasModel,GasAdapter.View
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.order_gas_item_view,parent,false);
         return new GasAdapter.ViewHolder(view);
     }
+
+
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 

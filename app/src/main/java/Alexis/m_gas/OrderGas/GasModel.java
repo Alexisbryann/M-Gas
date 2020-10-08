@@ -4,9 +4,9 @@ import android.widget.ImageView;
 
 public class GasModel {
     public static String Name;
-    public static String quantity;
-    public static ImageView image;
-    public static String cost;
+    public static String Quantity;
+    public static ImageView Image;
+    public static String Cost;
     private String pid;
 
     public GasModel() {
@@ -27,31 +27,34 @@ public class GasModel {
     }
 
     public static String getQuantity() {
-        return quantity;
+        return Quantity;
     }
 
     public void setGasQuantity(String gasQuantity) {
-        GasModel.quantity = gasQuantity;
+        GasModel.Quantity = gasQuantity;
     }
 
     public static ImageView getImage() {
-        return image;
+        return Image;
     }
 
     public void setGasImage(ImageView gasImage) {
-        GasModel.image = gasImage;
+        GasModel.Image = gasImage;
     }
 
     public static String getCost() {
-        return cost;
+        return Cost;
     }
 
     public void setGasCost(String gasCost) {
-        GasModel.cost = gasCost;
+        GasModel.Cost = gasCost;
     }
 
     public GasModel(String name, String cost, String quantity, ImageView image) {
         Name = name;
+        Quantity = quantity;
+        Image = image;
+        Cost = cost;
     }
 
 }
