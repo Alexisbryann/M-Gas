@@ -48,9 +48,6 @@ public class GasAdapter extends FirebaseRecyclerAdapter<GasModel,GasAdapter.View
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.order_gas_item_view,parent,false);
         return new GasAdapter.ViewHolder(view);
     }
-
-
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView mGasName;

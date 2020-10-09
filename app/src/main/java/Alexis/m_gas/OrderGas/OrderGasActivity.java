@@ -1,14 +1,20 @@
 package Alexis.m_gas.OrderGas;
 
 import android.os.Bundle;
+import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import Alexis.m_gas.R;
 
@@ -27,15 +33,19 @@ public class OrderGasActivity extends AppCompatActivity {
 //        Instance of the database and its reference
         mReference = FirebaseDatabase.getInstance().getReference().child("gas_type");
         mRecyclerView = findViewById(R.id.recycler);
-
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        loadGasDetail();
+    }
 
+    private void loadGasDetail() {
         // A class provided by the FirebaseUI to make a query in the database to fetch appropriate data
         FirebaseRecyclerOptions<GasModel> options = new FirebaseRecyclerOptions
                 .Builder<GasModel>()
-                .setQuery(mReference.orderByKey(),GasModel.class)
+                .setQuery(mReference,GasModel.class)
                 .build();
+
+
         mAdapter = new GasAdapter(options);
         mRecyclerView.setAdapter(mAdapter);
     }
