@@ -7,16 +7,16 @@ public class GasModel {
     public static String Quantity;
     public static ImageView Image;
     public static String Cost;
-    private String pid;
+    private static int pid;
 
     public GasModel() {
     }
-    public String getPid() {
+    public int getPosition() {
         return pid;
     }
 
-    public void setPid(String pid) {
-        this.pid = pid;
+    public void setPosition(int position) {
+        GasModel.pid = position;
     }
     public static String getName() {
         return Name;
