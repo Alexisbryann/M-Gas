@@ -22,7 +22,7 @@ public class GasModel {
         return Name;
     }
 
-    public void setGasName(String gasName) {
+    public static void setName(String gasName) {
         GasModel.Name = gasName;
     }
 
@@ -30,15 +30,15 @@ public class GasModel {
         return Quantity;
     }
 
-    public void setGasQuantity(String gasQuantity) {
-        GasModel.Quantity = gasQuantity;
+    public static void setQuantity(String Quantity) {
+        GasModel.Quantity = Quantity;
     }
 
     public static ImageView getImage() {
         return Image;
     }
 
-    public void setGasImage(ImageView gasImage) {
+    public void setImage(ImageView gasImage) {
         GasModel.Image = gasImage;
     }
 
@@ -46,7 +46,7 @@ public class GasModel {
         return Cost;
     }
 
-    public void setGasCost(String gasCost) {
+    public void setCost(String gasCost) {
         GasModel.Cost = gasCost;
     }
 

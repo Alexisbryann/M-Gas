@@ -1,5 +1,6 @@
 package Alexis.m_gas.OrderGas;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,23 +19,28 @@ import java.util.List;
 
 import Alexis.m_gas.R;
 
-public class GasAdapter extends FirebaseRecyclerAdapter<GasModel,GasAdapter.ViewHolder> {
+public class GasAdapter extends RecyclerView.Adapter<GasAdapter.ViewHolder> {
 
-//    private List<GasModel> mGasModelList ;
-    public GasAdapter(FirebaseRecyclerOptions<GasModel> options) {
+    public List<GasModel> mGasModelList = new ArrayList<>() ;
+    private Context mContext = null;
 
-        super(options);
-//        mGasModelList = gasModelList;
+    public GasAdapter(Context context, List<GasModel> mGasModelList) {
+
+//        super(options);
+        this.mContext= context;
+        this.mGasModelList = mGasModelList;
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull GasAdapter.ViewHolder holder, int position, @NonNull GasModel model) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        ImageView image = model.getImage();
-        holder.mGasName.setText(model.getName());
-        holder.mGasQuantity.setText(model.getQuantity());
-        holder.mGasCost.setText(model.getCost());
+        GasModel gasModel = mGasModelList.get(position);
+        ImageView image = gasModel.getImage();
+        holder.mGasName.setText(gasModel.getName());
+        holder.mGasQuantity.setText(gasModel.getQuantity());
+        holder.mGasCost.setText(gasModel.getCost());
         Glide.with(holder.itemView.getContext()).load(image).into(holder.mGasImage);
+
     }
 
     @NonNull
@@ -45,15 +51,15 @@ public class GasAdapter extends FirebaseRecyclerAdapter<GasModel,GasAdapter.View
         return new GasAdapter.ViewHolder(view);
     }
 
-//    @Override
-//    public int getItemCount() {
-//
-//        return mGasModelList.size();
-//    }
+    @Override
+    public int getItemCount()
+    {
+        return mGasModelList.size();
+    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private final TextView mGasName;
+        public TextView mGasName;
         private final TextView mGasQuantity;
         private final TextView mGasCost;
         private final ImageView mGasImage;
