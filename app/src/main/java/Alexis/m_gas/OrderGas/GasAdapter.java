@@ -1,6 +1,5 @@
 package Alexis.m_gas.OrderGas;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,34 +12,30 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import Alexis.m_gas.R;
 
-public class GasAdapter extends RecyclerView.Adapter<GasAdapter.ViewHolder> {
+public class GasAdapter extends FirestoreRecyclerAdapter<GasModel,GasAdapter.ViewHolder> {
 
-    public List<GasModel> mGasModelList = new ArrayList<>() ;
-    private Context mContext = null;
-
-    public GasAdapter(Context context, List<GasModel> mGasModelList) {
-
-//        super(options);
-        this.mContext= context;
-        this.mGasModelList = mGasModelList;
+    //    private List<GasModel> mGasModelList ;
+    public GasAdapter(FirestoreRecyclerOptions<GasModel> options) {
+        super(options);
+//        mGasModelList = gasModelList;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    protected void onBindViewHolder(@NonNull GasAdapter.ViewHolder holder, int position, @NonNull GasModel model) {
 
-        GasModel gasModel = mGasModelList.get(position);
-        ImageView image = gasModel.getImage();
-        holder.mGasName.setText(gasModel.getName());
-        holder.mGasQuantity.setText(gasModel.getQuantity());
-        holder.mGasCost.setText(gasModel.getCost());
-        Glide.with(holder.itemView.getContext()).load(image).into(holder.mGasImage);
-
+//        ImageView image = model.getImage();
+        holder.mGasName.setText(model.getName());
+        holder.mGasQuantity.setText(model.getQuantity());
+        holder.mGasCost.setText(model.getCost());
+//        Glide.with(holder.itemView.getContext()).load(image).into(holder.mGasImage);
     }
 
     @NonNull
@@ -51,15 +46,15 @@ public class GasAdapter extends RecyclerView.Adapter<GasAdapter.ViewHolder> {
         return new GasAdapter.ViewHolder(view);
     }
 
-    @Override
-    public int getItemCount()
-    {
-        return mGasModelList.size();
-    }
+//    @Override
+//    public int getItemCount() {
+//
+//        return mGasModelList.size();
+//    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView mGasName;
+        private final TextView mGasName;
         private final TextView mGasQuantity;
         private final TextView mGasCost;
         private final ImageView mGasImage;

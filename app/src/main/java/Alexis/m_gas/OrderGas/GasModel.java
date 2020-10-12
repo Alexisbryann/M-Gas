@@ -1,60 +1,60 @@
 package Alexis.m_gas.OrderGas;
 
-import android.widget.ImageView;
-
 public class GasModel {
-    public static String Name;
-    public static String Quantity;
-    public static ImageView Image;
-    public static String Cost;
-    private static int pid;
+    private String name;
+    private String quantity;
+    private String image;
+    private String cost;
+    private int pid;
+
+    public GasModel(String name, String quantity, String image, String cost) {
+        this.name = name;
+        this.quantity = quantity;
+        this.image = image;
+        this.cost = cost;
+    }
 
     public GasModel() {
+
     }
-    public int getPosition() {
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getCost() {
+        return cost;
+    }
+
+    public void setCost(String cost) {
+        this.cost = cost;
+    }
+
+    public int getPid() {
         return pid;
     }
 
-    public void setPosition(int position) {
-        GasModel.pid = position;
+    public void setPid(int pid) {
+        this.pid = pid;
     }
-    public static String getName() {
-        return Name;
-    }
-
-    public static void setName(String gasName) {
-        GasModel.Name = gasName;
-    }
-
-    public static String getQuantity() {
-        return Quantity;
-    }
-
-    public static void setQuantity(String Quantity) {
-        GasModel.Quantity = Quantity;
-    }
-
-    public static ImageView getImage() {
-        return Image;
-    }
-
-    public void setImage(ImageView gasImage) {
-        GasModel.Image = gasImage;
-    }
-
-    public static String getCost() {
-        return Cost;
-    }
-
-    public void setCost(String gasCost) {
-        GasModel.Cost = gasCost;
-    }
-
-    public GasModel(String name, String cost, String quantity, ImageView image) {
-        Name = name;
-        Quantity = quantity;
-        Image = image;
-        Cost = cost;
-    }
-
 }
